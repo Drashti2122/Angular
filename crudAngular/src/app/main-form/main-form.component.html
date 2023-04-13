@@ -1,0 +1,37 @@
+<form (ngSubmit)="onSubmit(f)" #f="ngForm">
+  <div class="mb-3">
+    <label for="exampleFormControlInput1" class="form-label">Employee name</label>
+    <input type="text" class="form-control" id="ename" name="ename" ngModel required rows="3">
+  </div>
+  <div class="mb-3">
+    <label for="exampleFormControlTextarea1" class="form-label">Employee BirthDate:</label>
+    <input type="text" class="form-control" id="edob" name="edob" ngModel required rows="3">
+  </div>
+  <div class="mb-3">
+    <label for="exampleFormControlTextarea1" class="form-label">Employee Department:</label>
+    <input type="text" class="form-control" id="edept" name="edept" ngModel required rows="3">
+  </div><br>
+  <div class="mb-3">
+    <button class="btn btn-primary" type="submit" [disabled]="!f.valid">save</button>
+  </div>
+</form>
+<router-outlet></router-outlet>
+
+<!-- <form (ngSubmit)="onSubmit(f)" #f="ngForm">
+  <div class="mb-3">
+    <label for="exampleFormControlInput1" class="form-label">Employee name</label>
+    <input type="text" class="form-control" id="ename" formControlName="ename" rows="3">
+  </div>
+  <div class="mb-3">
+    <label for="exampleFormControlTextarea1" class="form-label">Employee BirthDate:</label>
+    <input type="date" class="form-control" id="edob" formControlName="edob" rows="3">
+  </div>
+  <div class="mb-3">
+    <label for="exampleFormControlTextarea1" class="form-label">Employee Department:</label>
+    <input type="text" class="form-control" id="edept" formControlName="edept" rows="3">
+  </div><br>
+  <div class="mb-3">
+    <button class="btn btn-primary" type="button">save</button>
+  </div>
+</form>
+<router-outlet></router-outlet> -->

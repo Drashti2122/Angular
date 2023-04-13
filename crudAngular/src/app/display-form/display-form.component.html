@@ -1,0 +1,23 @@
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">Employee Name</th>
+      <th scope="col">Employee Bdate</th>
+      <th scope="col">Employee Department</th>
+      <th scope="col">Edit</th>
+      <th scope="col">Delete</th>
+    </tr>
+  </thead>
+  <tbody *ngFor="let emp of employee;let i=index">
+    <tr>
+      <td>{{emp.ename}}</td>
+      <td>{{emp.edob}}</td>
+      <td>{{emp.edept}}</td>
+      <td><button type="button" class="btn btn-primary" (click)="onEditEmp(i)">Edit</button></td>
+      <td><button type="button" class="btn btn-primary" (click)="onDeleteEmp(i)">X</button></td>
+    </tr>
+  </tbody>
+</table>
+<!-- <div *ngFor="let emp of employee">
+  <div>{{emp.ename}}</div>
+</div> -->
